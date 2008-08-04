@@ -52,6 +52,9 @@ Gem.path.unshift(Merb.root / "gems")
 # later part of your configuration relies on libraries specified
 # here.
 #
+require 'dm-core'
+require 'dm-validations'
+#
 # dependencies "RedCloth", "merb_helpers"
 # OR
 # dependency "RedCloth", "> 3.0"
@@ -72,7 +75,7 @@ end
 # if you need a database.
 
 # Uncomment for DataMapper ORM
-# use_orm :datamapper
+use_orm :datamapper
 
 # Uncomment for ActiveRecord ORM
 # use_orm :activerecord
@@ -94,7 +97,7 @@ end
 # merb.
 #
 # use_test :test_unit
-# use_test :rspec
+use_test :rspec
 
 
 #
